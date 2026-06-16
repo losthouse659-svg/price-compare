@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Multi shop srovnavac cen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header>
+      <p class="eyebrow">price-compare</p>
+      <h1>Multi shop srovnavac cen</h1>
+      <p class="subtitle">Vyhledej produkt a porovnej ceny na Alze, Datartu, Bazosi a dalsich shopech.</p>
+    </header>
+
+    <section class="search-panel">
+      <div class="field-group">
+        <input id="queryInput" type="text" placeholder="Co chces hledat? (napr. RTX 4060, iPhone 15...)">
+        <button id="searchBtn" type="button">Vyhledat</button>
+      </div>
+      <div class="shops">
+        <label><input type="checkbox" value="alza" checked> Alza</label>
+        <label><input type="checkbox" value="datart" checked> Datart</label>
+        <label><input type="checkbox" value="czc" checked> CZC</label>
+        <label><input type="checkbox" value="bazos" checked> Bazos</label>
+        <label><input type="checkbox" value="heureka" checked> Heureka</label>
+        <label><input type="checkbox" value="mall" checked> Mall</label>
+      </div>
+      <p class="hint">Kliknutim se otevre vyhledavani v novych tabech. Vysledky pak muzete porovnavat rucne.</p>
+    </section>
+
+    <section class="results-panel">
+      <div class="results-header">
+        <span id="resultsCount" class="results-count">Zadne vysledky</span>
+        <button id="clearBtn" type="button" class="btn-secondary">Vymazat</button>
+      </div>
+      <div class="table-wrap">
+        <table id="resultsTable">
+          <thead>
+            <tr>
+              <th data-sort="shop">Shop</th>
+              <th data-sort="name">Nazev produktu</th>
+              <th data-sort="price">Cena</th>
+              <th>Odkaz</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody">
+          </tbody>
+        </table>
+      </div>
+      <p class="hint" id="emptyHint">Zatim zadne vysledky. Vyhledej produkt nahore.</p>
+    </section>
+  </div>
+
+  <script src="./assets/js/search.js"></script>
+</body>
+</html>
